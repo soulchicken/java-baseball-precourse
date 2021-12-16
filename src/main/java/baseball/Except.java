@@ -9,4 +9,13 @@ public class Except {
             PrintUI.InputNum();
         }
     }
+
+    static void RestartCommandExcept() {
+        try {
+            throw new IllegalArgumentException();
+        } catch (IllegalArgumentException e) {
+            System.out.println("[ERROR] : 1 또는 2를 입력해주세요");
+            PrintUI.RestartOrEndGame();
+        }
+    }
 }
